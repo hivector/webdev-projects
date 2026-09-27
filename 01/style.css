@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+    --base-color: #f0f0f0;
+    --text-colour: #333333;
+    --primary-color: hsl(236, 100%, 50%);
+    --secondary-color: hsla(236, 100%, 50%, 0.646);
+    --colour-1: #ffffff;
+    --colour-2: #cce5ff;
+    --colour-3: #d5ffcc;
+}
+
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-colour);
+}
+
+body{
+    padding: 1em;
+    background-color: var(--base-color);
+}
+
+nav{
+    margin: 1em auto 3em auto;
+    width: min(1000px, 100%);
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    gap: 1em;
+    font-size: 1.2rem;
+}
+
+/* doing this so that rajwant singh go to left and all other opt go to right*/
+nav li:first-child{
+    margin-right: auto;
+    font-weight: bold;
+}
+
+nav a{
+    text-decoration: none;
+    color: var(--text-colour);
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+
+nav a:hover{
+    text-decoration: none;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-weight: bold;
+}
+
+
+header,section{
+    margin: 2em auto;
+    width: min(75em, 100%);
+    background-color: var(--colour-1);
+    padding: min(2em, 15%);
+    border-radius: 1em;
+}
+
+.flex-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10em;
+    margin: 5em auto;
+}
+
+header img{
+    max-width:100%;
+    border-radius: 1em;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+.text-container{
+    flex: 0 1 34em;
+    
+}
+
+h1{
+    font-size: 2.5rem;
+    margin-bottom: 0.5em;
+}
+
+.text-container p{
+    margin: 0.75em 0 1em 0;
+    font-size: 1.2rem;
+}
+
+.cta-button{
+    display: inline-block;
+    padding: 0.75em 1.5em;
+    background-color: var(--primary-color);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 0.5em;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    
+}
+
+.cta-button:hover{
+    background-color: var(--secondary-color);
+}
+section{
+    text-align: center;
+    margin: 2em auto;
+    background-color: var(--colour-1);
+    padding: 3em min(2em, 15%);
+    border-radius: 1em;
+}
+
+section h2{
+    font-size: 2rem;
+    margin-bottom: 0.5em;
+}
+
+section p{
+    margin: 0.75em 0 1em 0;
+    font-size: 1.2rem;
+}
+
+
+.grid-container {
+  margin-top: 3em;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 200px 200px;
+  grid-template-areas: 
+    "img-2 img-2 img-1 img-3"
+    "img-2 img-2 img-4 img-5";
+  gap: 1em;
+}
+
+.img-1 { grid-area: img-1; }
+.img-2 { grid-area: img-2; }
+.img-3 { grid-area: img-3; }
+.img-4 { grid-area: img-4; }
+.img-5 { grid-area: img-5; }
+
+.grid-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   
+  border-radius: .5em;
+  transition: 100ms ease;
+}
+
+.grid-container img:hover {
+  scale: 1.05;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+details {
+  margin-top: 1em;
+  background-color: var(--base-color);
+  border-radius: 1em;
+}
+
+details summary {
+  padding: 1em;
+  font-size: 1.7rem;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: Montserrat, Poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+details p {
+  padding: 0 2em 2em 2em;
+}
